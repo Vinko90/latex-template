@@ -1,0 +1,32 @@
+\begingroup
+\let\clearpage\relax
+\chapter*{References}
+\endgroup
+
+\settowidth{\bibrowwidth}{Author (Company):}
+\addtolength{\bibrowwidth}{0.5cm}
+
+\renewcommand{\bibname}{Mandatory}
+\begin{thebibliography}{99999} % '99999' indicates that the width of the label is 5 digits wide.
+	\bibitem[1.1]{label1}
+		\wodbibrow{Title:}{<Title>}
+		\wodbibrow{Author (Company):}{<Name>, <Name> (<Company>)}
+		\wodbibrow{ID, Version, Date:}{<DocID>, <version>, <Date yyyy-mm-dd>}
+	\bibitem[1.2]{label2}
+		\wodbibrow{Title:}{<Title>}
+		\wodbibrow{Author (Company):}{<Name>, <Name> (<Company>)}
+		\wodbibrow{ID, Version, Date:}{<DocID>, <version>, <Date yyyy-mm-dd>}
+\end{thebibliography}
+
+\renewcommand{\bibname}{Referenced}
+\begin{thebibliography}{99999} % '99999' indicates that the width of the label is 5 digits wide.
+	\bibitem[2.1]{label3}
+		\wodbibrow{Title:}{<Title>}
+		\wodbibrow{Author (Company):}{<Name>, <Name> (<Company>)}
+		\wodbibrow{ID, Version, Date:}{<DocID>, <version>, <Date yyyy-mm-dd>}
+	\bibitem[2.2]{label4}
+		\wodbibrow{Title:}{<Title>}
+		\wodbibrow{Author (Company):}{<Name>, <Name> (<Company>)}
+		\wodbibrow{ID, Version, Date:}{<DocID>, <version>, <Date yyyy-mm-dd>}
+\end{thebibliography}
+\newpage

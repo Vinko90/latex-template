@@ -1,0 +1,58 @@
+\documentclass[a4paper]{custom/wodcustom}
+\usepackage{placeins}
+\usepackage{siunitx}
+\usepackage[super]{nth}
+
+\title{LaTeX Template}
+\author{WarOfDevil}
+\productowner{Company Name}
+\releasedate{\woddate\today}
+\documentstatus{Concept}
+
+\begin{document}
+\maketitle
+\makedisclaimer
+
+% either use history or historyS
+\begin{woddocumenthistory}
+	\woddocumenthistoryrow{yyyy-mm-dd}{First version}
+\end{woddocumenthistory}
+
+\begin{woddocumenthistoryS*}
+	\woddocumenthistoryrowS{yyyy-mm-dd}{Concept}{First version}
+	\woddocumenthistoryrowS{yyyy-mm-dd}{Accepted}{First version}
+\end{woddocumenthistoryS*}
+
+\begin{woddistributionlist}{c|c|c}{R01 & R02 & R03}
+	\wodtablerow{<name 1> & x &   &   }
+	\wodtablerow{<name 2> & x & x &   }
+	\wodtablerow{<name 3> & x &   & x }
+\end{woddistributionlist}
+
+\begin{woddistributionlist*}{c|c|c}{R01 & R02 & R03}
+	\wodtablerowspan{4}{l}{Customer}
+	\wodtablerow{<name 1> & x &   &   }
+	\wodtablerow{<name 2> & x & x &   }
+	\wodtablerowspan{4}{l}{Someone else}
+	\wodtablerow{<name 3> & x &   & x }
+	\wodtablerow{<name 4> & x & x &   }
+\end{woddistributionlist*}
+
+% in a real document replace the 1.1 by a real references to 
+% a section using \ref{<section label>}
+\begin{wodissues}
+	\wodissue{1.}{1.1}{<issue in section 1.1>}{<username>}{yyyy-mm-dd} 
+	\wodissue{2.}{2.1}{<issue in section 3.1>}{<username>}{yyyy-mm-dd}
+\end{wodissues}
+
+\wodtableofcontents
+\wodlistoffigures
+\wodlistoftables
+
+\input{contents/references}
+\input{contents/introduction}
+
+\wodappendix
+\input{appendix/commands}
+
+\end{document}
